@@ -25,7 +25,7 @@ export default function Services() {
   const [categories, setCategories] = useState([]);
   const [selectedcategory, setSelectedcategory] = useState("All");
 
-  //Fetch Products
+  //Fetch Services
   useEffect(() => {
     axios.get('http://localhost:8000/service/getservice')
       .then((res) => {
@@ -47,8 +47,8 @@ export default function Services() {
       });
   }, []);
 
-  // Filter Products
-  const filteredproducts =
+  // Filter Services
+  const filteredservices =
     selectedcategory === "All"
       ? service
       : service.filter((pro) => pro.categoryId === selectedcategory);
@@ -93,7 +93,7 @@ export default function Services() {
           gap: "20px",
         }}
       >
-        {filteredproducts.map((sdata) => (
+        {filteredservices.map((sdata) => (
           <Card
             key={sdata._id}
             sx={{
@@ -133,7 +133,7 @@ export default function Services() {
                 objectFit: "cover",
                 borderRadius: "8px"
               }}
-              onClick={() => navigate(`/product/${sdata._id}`)}
+              onClick={() => navigate(`/service/${sdata._id}`)}
             />
 
             <CardContent>
