@@ -19,7 +19,7 @@ export default function AdminRoute() {
     <div>
       <Sidebar/>
       <Routes>
-        <Route path='/AHome' element={<AHome/>}/>
+        <Route path='/' element={<AHome/>}/>
         <Route path='/ALogin' element={<ALogin/>}/>
         <Route path='/ViewUser' element={<ViewUser/>}/>
         <Route path='/ManageUser' element={<ManageUser/>}/>

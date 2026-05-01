@@ -52,10 +52,10 @@ export default function Services() {
     selectedcategory === "All"
       ? service
       : service.filter((pro) => pro.categoryId === selectedcategory);
-  service
+  
   return (
     <div style={{
-      marginTop: "30px", padding: "10px", backgroundColor: "#9fb6c1",
+      marginTop: "30px", padding: "10px", background: "linear-gradient(to right, #deeef4, #2f829d)",
       padding: "40px 20px"
     }}>
 

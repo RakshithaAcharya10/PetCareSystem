@@ -1,186 +1,127 @@
 import React from "react";
 import { Box, Typography, Grid, Paper, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function UAbout() {
+  const navigate = useNavigate()
+
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "#a8c3cc", textAlign: "center" }}>
+    <Box sx={{ background: "linear-gradient(to right, #deeef4, #2f829d)" }}>
 
-      {/* 🔥 Top Section */}
-      <Box sx={{ px: { xs: 3, md: 10 }, py: 8 }}>
-        <Grid container spacing={4} justifyContent="center" alignItems="center">
+      {/* 🔥 HERO SECTION */}
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 10 }}>
+        <Grid container spacing={4} alignItems="center">
 
-          {/* Text */}
+          {/* LEFT TEXT */}
           <Grid item xs={12} md={6}>
             <Typography
               sx={{
-                fontWeight: 500,
-                fontSize: { xs: "28px", md: "40px" },
+                fontSize: { xs: "32px", md: "48px" },
+                fontWeight: "bold",
                 color: "#1e3a5f"
               }}
             >
-              The Best Pet Groomers in Town
+              The Best Pet Groomers in Town 🐾
             </Typography>
 
-            <Typography sx={{ mt: 2, fontSize: "18px", color: "#1e3a5f" }}>
-              For a pawfect look and feel
+            <Typography sx={{ mt: 2, fontSize: "18px", color: "#555" }}>
+              Give your pets the love, care, and grooming they deserve.
             </Typography>
 
             <Button
               variant="contained"
               sx={{
-                mt: 3,
-                px: 3,
-                py: 1,
-                fontSize: "14px",
+                mt: 4,
+                px: 4,
+                py: 1.5,
+                fontSize: "16px",
+                borderRadius: "8px",
                 bgcolor: "#1e3a5f"
               }}
+              onClick={() => navigate("/Services")}
             >
-              Learn More
+              Explore Services
             </Button>
           </Grid>
 
-          {/* Image */}
+          {/* RIGHT IMAGE */}
           <Grid item xs={12} md={6}>
             <img
               src="https://static.wixstatic.com/media/84770f_cc7fbf222d044cf09028f921a0cfe36e~mv2.png"
               alt="pets"
-              style={{
-                width: "100%",
-                maxWidth: "600px",
-                margin: "0 auto",
-                display: "block"
-              }}
+              style={{ width: "100%", maxWidth: "500px" }}
             />
           </Grid>
 
         </Grid>
       </Box>
-
-      {/* 🔥 Features */}
-      <Box sx={{ py: 8 }}>
-        <Typography
-          sx={{
-            fontWeight: 600,
-            fontSize: { xs: "32px", md: "38px" },
-            color: "#1e3a5f"
-          }}
-        >
-          Your pet deserves to be pampered!
-        </Typography>
-
-        <Grid
-  container
-  spacing={3}
-  justifyContent="center"
-  sx={{ mt: 4 }}
->
-  {[
-    {
-      title: "Grooming",
-      desc: "Services focused on pet hygiene and appearance such as bathing, hair trimming, nail clipping, ear cleaning, and overall grooming care."
-    },
-    {
-      title: "Medical",
-      desc: "Healthcare services for pets including vaccination, health checkups, diagnostic tests, treatments, and surgical procedures."
-    },
-    {
-      title: "Training",
-      desc: "Services designed to improve pet behavior and skills including obedience training, behavior correction, and socialization for dogs and cats."
-    }
-  ].map((item, i) => (
-    <Grid
-      item
-      xs={12}
-      sm={6}
-      md={4}
-      key={i}
-      sx={{ display: "flex", justifyContent: "center" }}
-    >
-      <Paper
-        elevation={3}
-        sx={{
-          p: 3,
-          width: "100%",
-          maxWidth: "300px",
-          textAlign: "center",
-          borderRadius: 2
-        }}
-      >
-        <Typography variant="h6" fontWeight="bold">
-          {item.title}
-        </Typography>
-
-        <Typography sx={{ mt: 2 }}>
-          {item.desc}
-        </Typography>
-      </Paper>
-    </Grid>
-  ))}
-</Grid>
-      </Box>
-
-      {/* 🔥 About Section */}
-      <Box sx={{ maxWidth: "700px", mx: "auto", pb: 8 }}>
-        <Typography sx={{ fontSize: "35px", fontWeight: 600 }}>
+      
+      {/* 🔥 ABOUT SECTION */}
+      <Box sx={{ py: 10, bgcolor: "#e8f1f5", textAlign: "center" }}>
+        <Typography sx={{ fontSize: "36px", fontWeight: "bold" }}>
           Who We Are
         </Typography>
 
-        <Typography sx={{ mt: 2, fontSize: "20px", lineHeight: 1.7 }}>
+        <Typography sx={{ mt: 3, maxWidth: "700px", mx: "auto", color: "#444" }}>
           We provide professional pet grooming services with love and care.
-          Our team ensures your pets feel comfortable, clean, and happy.
+          Our expert team ensures your pets feel clean, comfortable, and happy.
         </Typography>
 
-        <Typography sx={{ mt: 2, fontSize: "20px", lineHeight: 1.7 }}>
-          From bathing to styling, we offer complete grooming solutions
-          designed for your pet’s health and happiness.
+        <Typography sx={{ mt: 2, maxWidth: "700px", mx: "auto", color: "#444" }}>
+          From bathing to styling, we offer complete grooming solutions tailored
+          to your pet’s health and happiness.
         </Typography>
       </Box>
 
-      {/* 🔥 Services Section */}
-      <Box sx={{ py: 1 }}>
-        <Typography sx={{ fontSize: "35px", fontWeight: 600 }}>
-          Our Services
+    <Box sx={{ py: 10, textAlign: "center" }}>
+  <Typography sx={{ fontSize: "36px", fontWeight: "bold", mb: 6 }}>
+    Why Choose Us?
+  </Typography>
+
+  {/* 🔥 FLEX CONTAINER */}
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "center",   // ✅ CENTER EVERYTHING
+      alignItems: "center",
+      gap: "30px",
+      flexWrap: "wrap"            // ✅ responsive
+    }}
+  >
+    {[
+      { title: "Experienced Staff", icon: "👩‍⚕️" },
+      { title: "Safe Products", icon: "🧴" },
+      { title: "Hygienic Environment", icon: "🧼" }
+    ].map((item, i) => (
+      <Paper
+        key={i}
+        sx={{
+          p: 4,
+          width: "220px",
+          textAlign: "center",
+          borderRadius: "12px",
+          transition: "0.3s",
+          "&:hover": {
+            transform: "translateY(-8px)",
+            boxShadow: "0px 10px 25px rgba(0,0,0,0.2)"
+          }
+        }}
+      >
+        <Typography sx={{ fontSize: "40px" }}>
+          {item.icon}
         </Typography>
 
-        <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
-          {["Hair Styling", "Nail Trimming", "Ear Cleaning", "Spa Treatment"].map((service, i) => (
-            <Grid item xs={12} sm={4} md={3} key={i}>
-              <Paper sx={{ p: 3 }}>
-                <Typography fontWeight="600">{service}</Typography>
-                <Typography variant="body2">
-                  Professional care for your pet
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-
-      {/* 🔥 Why Choose Us */}
-      <Box sx={{ py: 8, bgcolor: "#94aeb7" }}>
-        <Typography sx={{ fontSize: "35px", fontWeight: 600 }}>
-          Why Choose Us?
+        <Typography fontWeight="bold" sx={{ mt: 2 }}>
+          {item.title}
         </Typography>
+      </Paper>
+    ))}
+  </Box>
+</Box>
 
-        <Grid container spacing={4} justifyContent="center" sx={{ mt: 4 }}>
-          {[
-            "Experienced Staff",
-            "Safe Products",
-            "Hygienic Environment"
-          ].map((item, i) => (
-            <Grid item xs={12} md={3} key={i}>
-              <Typography fontWeight="600">{item}</Typography>
-              <Typography variant="body2">
-                We provide the best care for your pets
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-
-      {/* 🔥 Call To Action */}
-      <Box sx={{ py: 8 }}>
-        <Typography sx={{ fontSize: "35px", fontWeight: 600 }}>
+      {/* 🔥 CTA SECTION */}
+      <Box sx={{ py: 10, bgcolor: "#1e3a5f", color: "white", textAlign: "center" }}>
+        <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Book Your Pet’s Appointment Today!
         </Typography>
 

@@ -62,7 +62,7 @@ export default function AddCategory() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)"
+          background: "linear-gradient(to right, #deeef4, #2f829d)"
         }}
       >
         <Paper
@@ -85,7 +85,7 @@ export default function AddCategory() {
             label="Category Name"
             name="category_name"
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#c5e9f6"}}
             onChange={handlechange}
           />
 
@@ -95,7 +95,7 @@ export default function AddCategory() {
             multiline
             rows={4}
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#c5e9f6" }}
             onChange={handlechange}
           />
 

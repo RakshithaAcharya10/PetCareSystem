@@ -39,7 +39,7 @@ export default function AHome() {
       <Box
         sx={{
           minHeight: "80vh",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
+          background: "linear-gradient(to right, #deeef4, #2f829d)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
@@ -51,7 +51,7 @@ export default function AHome() {
             padding: "40px",
             borderRadius: "15px",
             textAlign: "center",
-            width: "80%"
+            width: "80%",
           }}
         >
           <Typography
@@ -76,7 +76,7 @@ export default function AHome() {
           </Typography>
 
           {/* ✅ DASHBOARD CARDS */}
-          <Grid container spacing={3} justifyContent="center">
+          <Grid container spacing={3} sx={{ display: "flex",justifyContent: "center", alignItems: "center", gap: "30px", flexWrap: "wrap" }}>
             <Grid item xs={12} sm={4}>
               <Paper elevation={5} sx={{ p: 3, borderRadius: "10px" }}>
                 <Typography variant="h6" color="#1e3a5f">Users</Typography>

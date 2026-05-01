@@ -11,7 +11,7 @@ import Myprofile from '../UComponents/Myprofile'
 import Bookingform from '../UComponents/Bookingform'
 import Trackstatus from '../UComponents/Trackstatus'
 import Feedback from '../UComponents/Feedback'
-import PaymentForm from '../UComponents/PaymentForm'
+import ServiceDetails from '../UComponents/ServiceDetails'
 
 function AppContent() {
   const location = useLocation()
@@ -25,11 +25,11 @@ function AppContent() {
         <Route path='/UAbout' element={<UAbout />} />
         <Route path='/UHome' element={<UHome />} />
         <Route path='/Services' element={<Services />} />
+        <Route path='/Service/:id' element={<ServiceDetails />} />
         <Route path='/FAQ' element={<FAQ />} />
         <Route path='/Myprofile' element={<Myprofile />} />
         <Route path='/Trackstatus' element={<Trackstatus />} />
         <Route path='/Feedback' element={<Feedback />} />
-        <Route path='/PaymentForm' element={<PaymentForm />} />
         <Route path='/Bookingform/:serviceID' element={<Bookingform />} />
       </Routes>
     </div>

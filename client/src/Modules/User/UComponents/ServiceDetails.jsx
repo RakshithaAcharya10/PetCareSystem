@@ -32,7 +32,8 @@ return (
       width: "90%",
       marginX: "auto",
       alignItems: "center",
-      justifyContent: "space-between"
+      justifyContent: "space-between",
+      background: "linear-gradient(to right, #deeef4, #2f829d)"
     }}
   >
     {/* 🔹 LEFT SIDE - IMAGE (50%) */}
@@ -52,38 +53,30 @@ return (
 
     {/* 🔹 RIGHT SIDE - DETAILS (50%) */}
     <div style={{ flex: 1 }}>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom yle={{fontSize:"35px", fontWeight:"bolder"}}>
         {service.service_name}
       </Typography>
 
-      <Typography variant="h4" color="green" gutterBottom>
+      <Typography variant="h4" color="green" gutterBottom style={{fontSize:"35px", fontWeight:"bolder"}}>
         ₹ {service.service_price}
       </Typography>
 
-      <Typography variant="body1" color="text.secondary" gutterBottom>
+      <Typography variant="body1" color="text.secondary" gutterBottom style={{fontSize:"25px"}}>
         {service.service_description}
       </Typography>
 
       <div style={{ marginTop: "25px", display: "flex", gap: "15px" }}>
         <button style={{
           padding: "12px 25px",
-          background: "black",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer"
-        }}>
-          Add to Cart
-        </button>
-
-        <button style={{
-          padding: "12px 25px",
-          background: "orange",
+          fontSize:"20px",
+          background: "#2d4f73",
+          color:"#ffffff",
+          fontWeight:"bolder",
           border: "none",
           borderRadius: "5px",
           cursor: "pointer"
         }}
-        onClick={()=>navigate(`/booking/${service._id}`)}>
+        onClick={()=>navigate(`/Bookingform/${service._id}`)}>
           Buy Now
         </button>
       </div>

@@ -63,7 +63,7 @@ export default function ViewUser() {
       <Box
         sx={{
           minHeight: "80vh",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
+          background: "linear-gradient(to right, #deeef4, #2f829d)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -93,38 +93,27 @@ export default function ViewUser() {
           <TableContainer>
             <Table>
               <TableHead>
-                <TableRow sx={{ backgroundColor: "#1e3a5f" }}>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>SL.NO</TableCell>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>NAME</TableCell>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>EMAIL</TableCell>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>PHONE</TableCell>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>ADDRESS</TableCell>
-                  <TableCell sx={{ color: "white", fontWeight: "bold" }}>ACTION</TableCell>
+                <TableRow sx={{ backgroundColor: "#1e3a5f"  }}>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>SL.NO</TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>NAME</TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>EMAIL</TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>PHONE</TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>ADDRESS</TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold", fontSize: "18px"}}>ACTION</TableCell>
                 </TableRow>
               </TableHead>
 
-              <TableBody>
+              <TableBody sx={{background: "#c5e9f6"}}>
                 {users.map((row, index) => (
                   <TableRow key={row._id}>
-                    <TableCell>{index + 1}</TableCell>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.email}</TableCell>
-                    <TableCell>{row.phone}</TableCell>
-                    <TableCell>{row.address}</TableCell>
+                    <TableCell sx={{fontSize: "17px", fontWeight:"bold"}}>{index + 1}</TableCell>
+                    <TableCell sx={{fontSize: "17px", fontWeight:"bold"}}>{row.name}</TableCell>
+                    <TableCell sx={{fontSize: "17px", fontWeight:"bold"}}>{row.email}</TableCell>
+                    <TableCell sx={{fontSize: "17px", fontWeight:"bold"}}>{row.phone}</TableCell>
+                    <TableCell sx={{fontSize: "17px", fontWeight:"bold"}}>{row.address}</TableCell>
                     <TableCell>
                       <Button
                         variant="contained"
-                        sx={{
-                          backgroundColor: "#1e3a5f",
-                          mr: 1,
-                          "&:hover": { backgroundColor: "#1e40af" }
-                        }}
-                      >
-                        UPDATE
-                      </Button>
-
-                      <Button
-                        variant="outlined"
                         color="error"
                         onClick={() => HandleDelete(row._id)}
                       >

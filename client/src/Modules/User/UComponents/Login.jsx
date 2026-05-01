@@ -72,7 +72,7 @@ export default function Login() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)"
+          background: "linear-gradient(to right, #deeef4, #2f829d)"
         }}
       >
         <Paper

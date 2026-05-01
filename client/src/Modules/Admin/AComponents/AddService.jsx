@@ -94,7 +94,7 @@ export default function AddService() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)"
+          background: "linear-gradient(to right, #deeef4, #2f829d)"
         }}
       >
         <Paper
@@ -117,7 +117,7 @@ export default function AddService() {
             label="Service Name"
             name="service_name"
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#e7f5f9"}}
             onChange={handlechange}
           />
 
@@ -126,7 +126,7 @@ export default function AddService() {
             name="service_price"
             type="number"
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#e7f5f9" }}
             onChange={handlechange}
           />
 
@@ -136,7 +136,7 @@ export default function AddService() {
             multiline
             rows={3}
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#e7f5f9" }}
             onChange={handlechange}
           />
 
@@ -145,7 +145,7 @@ export default function AddService() {
             name="service_image"
             InputLabelProps={{ shrink: true }}
             fullWidth
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, backgroundColor:"#e7f5f9" }}
             onChange={handlechange}
           />
 
@@ -154,6 +154,7 @@ export default function AddService() {
               name="categoryId"
               value={service.categoryId}
               onChange={handlechange}
+              sx={{ mb: 2, backgroundColor:"#e7f5f9" }}
               displayEmpty
             >
               <MenuItem value="">Select Category</MenuItem>

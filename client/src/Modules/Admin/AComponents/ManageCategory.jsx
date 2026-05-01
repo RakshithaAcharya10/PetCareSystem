@@ -67,7 +67,7 @@ export default function ManageCategory() {
       <Box
         sx={{
           minHeight: "80vh",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
+          background: "linear-gradient(to right, #deeef4, #2f829d)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
@@ -97,19 +97,19 @@ export default function ManageCategory() {
             <Table>
               <TableHead>
                 <TableRow sx={{ backgroundColor: "#1e3a5f" }}>
-                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold" }}>SL.NO</TableCell>
-                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold" }}>CATEGORY NAME</TableCell>
-                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold" }}>DESCRIPTION</TableCell>
-                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold" }}>ACTION</TableCell>
+                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold", fontSize:"18px"}}>SL.NO</TableCell>
+                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold", fontSize:"18px"}}>CATEGORY NAME</TableCell>
+                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold", fontSize:"18px"}}>DESCRIPTION</TableCell>
+                  <TableCell align="center" sx={{ color: "white", fontWeight: "bold", fontSize:"18px"}}>ACTION</TableCell>
                 </TableRow>
               </TableHead>
 
-              <TableBody>
+              <TableBody sx={{background: "#c5e9f6"}}>
                 {categories.map((row, index) => (
                   <TableRow key={row._id}>
-                    <TableCell align="center">{index + 1}</TableCell>
-                    <TableCell align="center">{row.category_name}</TableCell>
-                    <TableCell align="center">{row.category_description}</TableCell>
+                    <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{index + 1}</TableCell>
+                    <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.category_name}</TableCell>
+                    <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.category_description}</TableCell>
                     <TableCell align="center">
                       <Button
                         variant="contained"
@@ -121,7 +121,7 @@ export default function ManageCategory() {
                       </Button>
 
                       <Button
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         onClick={() => handleDelete(row._id)}
                       >

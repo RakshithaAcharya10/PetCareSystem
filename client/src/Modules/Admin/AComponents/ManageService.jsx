@@ -71,7 +71,7 @@ export default function ManageService() {
       <Box
         sx={{
           minHeight: "90vh",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
+          background: "linear-gradient(to right, #deeef4, #2f829d)",
           padding: "30px"
         }}
       >
@@ -89,25 +89,33 @@ export default function ManageService() {
 
         <TableContainer component={Paper} sx={{ borderRadius: "15px", boxShadow: 5 }}>
           <Table>
-            <TableHead>
+            <TableHead >
               <TableRow sx={{ backgroundColor: "#1e3a5f" }}>
                 {["SL.NO", "SERVICE NAME", "PRICE", "DESCRIPTION", "CATEGORY", "IMAGE", "ACTION"]
                   .map((head) => (
-                    <TableCell key={head} align="center" sx={{ color: "white", fontWeight: "bold" }}>
+                    <TableCell key={head} align="center" sx={{ color: "white", fontWeight: "bold", fontSize: "18px"  }}>
                       {head}
                     </TableCell>
                   ))}
               </TableRow>
             </TableHead>
 
-            <TableBody>
+            <TableBody sx={{backgroundColor:"#c6e4f1"}}>
               {services.map((row, index) => (
-                <TableRow key={row._id} hover>
-                  <TableCell align="center">{index + 1}</TableCell>
-                  <TableCell align="center">{row.service_name}</TableCell>
-                  <TableCell align="center">₹{row.service_price}</TableCell>
-                  <TableCell align="center">{row.service_description}</TableCell>
-                  <TableCell align="center">{row.category}</TableCell>
+                <TableRow
+  key={row._id}
+  hover
+  sx={{
+    "& td": {
+      borderBottom: "4px solid #e3eff5" // 🔥 line after each row
+    }
+  }}
+>
+                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{index + 1}</TableCell>
+                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.service_name}</TableCell>
+                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>₹{row.service_price}</TableCell>
+                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.service_description}</TableCell>
+                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.category}</TableCell>
 
                   {/* ✅ UPDATED IMAGE SIZE */}
                   <TableCell align="center">
@@ -139,7 +147,7 @@ export default function ManageService() {
                     </Button>
 
                     <Button
-                      variant="outlined"
+                      variant="contained"
                       color="error"
                       onClick={() => handleDelete(row._id)}
                     >

@@ -78,7 +78,7 @@ export default function ViewBooking() {
       <Box
         sx={{
           minHeight: "90vh",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
+          background: "linear-gradient(to right, #deeef4, #2f829d)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -104,17 +104,17 @@ export default function ViewBooking() {
           <TableContainer>
             <Table>
               <TableHead>
-                <TableRow sx={{ backgroundColor: "#e0f2fe" }}>
-                  <TableCell><b>SL.NO</b></TableCell>
-                  <TableCell><b>NAME</b></TableCell>
-                  <TableCell><b>ADDRESS</b></TableCell>
-                  <TableCell><b>SERVICE</b></TableCell>
-                  <TableCell><b>STATUS</b></TableCell>
-                  <TableCell><b>ACTION</b></TableCell>
+                <TableRow sx={{ backgroundColor: "#1e3a5f" }}>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>SL.NO</b></TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>NAME</b></TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>ADDRESS</b></TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>SERVICE</b></TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>STATUS</b></TableCell>
+                  <TableCell sx={{ color: "white", fontWeight: "bold" }}><b>ACTION</b></TableCell>
                 </TableRow>
               </TableHead>
 
-              <TableBody>
+              <TableBody sx={{background: "#c5e9f6"}}>
                 {booking.map((b, index) => (
                   <TableRow key={b._id}>
                     <TableCell>{index + 1}</TableCell>
@@ -128,10 +128,10 @@ export default function ViewBooking() {
                         value={b.bookingstatus}
                         onChange={(e) => handlechangestatus(b, e.target.value)}
                       >
-                        <MenuItem value="Pending">PENDING</MenuItem>
-                        <MenuItem value="Approved">APPROVED</MenuItem>
-                        <MenuItem value="Rejected">REJECTED</MenuItem>
-                        <MenuItem value="Completed">COMPLETED</MenuItem>
+                        <MenuItem value="Pending" variant='contained'>PENDING</MenuItem>
+                        <MenuItem value="Approved" variant='contained'>APPROVED</MenuItem>
+                        <MenuItem value="Rejected" variant='contained'>REJECTED</MenuItem>
+                        <MenuItem value="Completed" variant='contained'>COMPLETED</MenuItem>
                       </Select>
                     </TableCell>
                   </TableRow>

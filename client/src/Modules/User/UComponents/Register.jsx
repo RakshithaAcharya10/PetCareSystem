@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Typography, Paper, TextField, Button, Box } from '@mui/material'
 import axios from 'axios'
 import logo from "../../../assets/logo.png"
+import { useNavigate } from 'react-router-dom'
 
 export default function Register() {
   const [formdata, setFormdata] = useState({
@@ -12,6 +13,8 @@ export default function Register() {
     address: ''
   })
 
+  const navigate = useNavigate()
+
   const handlechange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value })
   }
@@ -20,6 +23,7 @@ export default function Register() {
     axios.post("http://localhost:8000/user/registeruser", formdata)
       .then((res) => {
         alert(res.data.message)
+        navigate("/Login")
       })
       .catch((error) => {
         console.log(error)
@@ -65,7 +69,7 @@ export default function Register() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "linear-gradient(to right, #dbeafe, #e0f2fe)"
+          background: "linear-gradient(to right, #deeef4, #2f829d)"
         }}
       >
         <Paper

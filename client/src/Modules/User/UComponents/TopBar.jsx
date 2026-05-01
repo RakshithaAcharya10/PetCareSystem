@@ -152,10 +152,10 @@ function TopBar() {
                 key={page.name}
                 onClick={() => HandleNavigate(page.path)}
                 sx={{
-                  my: 2,
                   color: 'white',
-                  display: 'block',
-                  mx: 2  
+                  mx: 2,
+                  fontSize: "18px",
+                  fontWeight: "bold"
                 }}
               >
                 {page.name}

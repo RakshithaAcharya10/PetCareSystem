@@ -56,7 +56,7 @@ export default function FAQ() {
   return (
     <Box
       sx={{
-        backgroundColor: "#9fb6c1",   // same as your About page
+        background: "linear-gradient(to right, #deeef4, #2f829d)",   // same as your About page
         minHeight: "100vh",
         padding: "60px 20px"
       }}
