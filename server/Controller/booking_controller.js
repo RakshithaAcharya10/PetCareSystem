@@ -54,7 +54,8 @@ const updateStatus = async (req, res) => {
 
 const getuserbookings = async (req, res) => {
     try {
-        const uid = req.userID
+        const uid = req.userid
+        console.log(uid)
         const bookings = await Bookingtable.find({ userID: uid })
             .populate("userID", "name address phone")
             .populate("serviceID", "service_name service_price ")
