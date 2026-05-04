@@ -8,7 +8,7 @@ export default function UAbout() {
   return (
     <Box sx={{ background: "linear-gradient(to right, #deeef4, #2f829d)" }}>
 
-      {/* 🔥 HERO SECTION */}
+      {/* HERO SECTION */}
       <Box sx={{ px: { xs: 3, md: 10 }, py: 10 }}>
         <Grid container spacing={4} alignItems="center">
 
@@ -56,7 +56,7 @@ export default function UAbout() {
         </Grid>
       </Box>
       
-      {/* 🔥 ABOUT SECTION */}
+      {/* ABOUT SECTION */}
       <Box sx={{ py: 10, bgcolor: "#e8f1f5", textAlign: "center" }}>
         <Typography sx={{ fontSize: "36px", fontWeight: "bold" }}>
           Who We Are
@@ -78,14 +78,14 @@ export default function UAbout() {
     Why Choose Us?
   </Typography>
 
-  {/* 🔥 FLEX CONTAINER */}
+  {/* FLEX CONTAINER */}
   <Box
     sx={{
       display: "flex",
-      justifyContent: "center",   // ✅ CENTER EVERYTHING
+      justifyContent: "center",  
       alignItems: "center",
       gap: "30px",
-      flexWrap: "wrap"            // ✅ responsive
+      flexWrap: "wrap"          
     }}
   >
     {[
@@ -119,7 +119,7 @@ export default function UAbout() {
   </Box>
 </Box>
 
-      {/* 🔥 CTA SECTION */}
+      {/* CTA SECTION */}
       <Box sx={{ py: 10, bgcolor: "#1e3a5f", color: "white", textAlign: "center" }}>
         <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Book Your Pet’s Appointment Today!

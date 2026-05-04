@@ -35,7 +35,7 @@ export default function ALogin() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -65,7 +65,7 @@ export default function ALogin() {
         </Typography>
       </Box>
 
-      {/* ✅ LOGIN FORM */}
+      {/* LOGIN FORM */}
       <Box
         sx={{
           minHeight: "70vh",

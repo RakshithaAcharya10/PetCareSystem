@@ -33,7 +33,7 @@ export default function ViewUser() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -59,7 +59,7 @@ export default function ViewUser() {
         </Typography>
       </Box>
 
-      {/* ✅ MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <Box
         sx={{
           minHeight: "80vh",

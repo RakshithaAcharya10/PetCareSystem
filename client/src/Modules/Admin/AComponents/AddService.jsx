@@ -57,7 +57,7 @@ export default function AddService() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -87,7 +87,7 @@ export default function AddService() {
         </Typography>
       </Box>
 
-      {/* ✅ FORM */}
+      {/* FORM */}
       <Box
         sx={{
           minHeight: "80vh",

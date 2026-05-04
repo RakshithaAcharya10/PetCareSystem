@@ -32,7 +32,7 @@ export default function Register() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -50,7 +50,7 @@ export default function Register() {
         />
 
         <Typography
-          variant="h2"   // ✅ increased size
+          variant="h2"   
           sx={{
             fontFamily: 'monospace',
             fontWeight: 700,
@@ -62,7 +62,7 @@ export default function Register() {
         </Typography>
       </Box>
 
-      {/* ✅ REGISTER FORM */}
+      {/* REGISTER FORM */}
       <Box
         sx={{
           minHeight: "70vh",

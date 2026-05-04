@@ -48,7 +48,7 @@ export default function ViewBooking() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -74,7 +74,7 @@ export default function ViewBooking() {
         </Typography>
       </Box>
 
-      {/* ✅ MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <Box
         sx={{
           minHeight: "90vh",
@@ -142,7 +142,7 @@ export default function ViewBooking() {
         </Paper>
       </Box>
 
-      {/* ✅ DIALOG */}
+      {/* DIALOG */}
       <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogTitle>Confirm Status Update</DialogTitle>
         <DialogContent>

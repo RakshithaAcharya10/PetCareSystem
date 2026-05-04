@@ -5,7 +5,7 @@ import logo from "../../../assets/logo.png"
 export default function AHome() {
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -35,7 +35,7 @@ export default function AHome() {
         </Typography>
       </Box>
 
-      {/* ✅ MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <Box
         sx={{
           minHeight: "80vh",
@@ -75,7 +75,7 @@ export default function AHome() {
             Manage your services, bookings, users and categories from here.
           </Typography>
 
-          {/* ✅ DASHBOARD CARDS */}
+          {/* DASHBOARD CARDS */}
           <Grid container spacing={3} sx={{ display: "flex",justifyContent: "center", alignItems: "center", gap: "30px", flexWrap: "wrap" }}>
             <Grid item xs={12} sm={4}>
               <Paper elevation={5} sx={{ p: 3, borderRadius: "10px" }}>

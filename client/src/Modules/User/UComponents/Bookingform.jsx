@@ -52,7 +52,7 @@ export default function Bookingform() {
 
   return (
     <>
-      {/* ✅ FORM */}
+      {/* FORM */}
       <Box
         sx={{
           minHeight: "70vh",

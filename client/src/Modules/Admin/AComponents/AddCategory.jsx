@@ -25,7 +25,7 @@ export default function AddCategory() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -55,7 +55,7 @@ export default function AddCategory() {
         </Typography>
       </Box>
 
-      {/* ✅ FORM SECTION */}
+      {/* FORM SECTION */}
       <Box
         sx={{
           minHeight: "70vh",

@@ -28,7 +28,7 @@ export default function ViewFeedback() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -54,15 +54,15 @@ export default function ViewFeedback() {
         </Typography>
       </Box>
 
-      {/* ✅ MAIN CONTENT (FIXED SPACING) */}
+      {/* MAIN CONTENT (FIXED SPACING) */}
       <Box
         sx={{
           minHeight: "100vh",
           background: "linear-gradient(to right, #dbeafe, #e0f2fe)",
           display: "flex",
           justifyContent: "center",
-          alignItems: "flex-start",   // 🔥 move content to top
-          paddingTop: "30px",         // 🔥 small gap from header
+          alignItems: "flex-start",   
+          paddingTop: "30px", 
           paddingBottom: "20px"
         }}
       >

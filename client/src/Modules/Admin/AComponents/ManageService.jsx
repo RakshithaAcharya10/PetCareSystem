@@ -93,38 +93,37 @@ export default function ManageService() {
               <TableRow sx={{ backgroundColor: "#1e3a5f" }}>
                 {["SL.NO", "SERVICE NAME", "PRICE", "DESCRIPTION", "CATEGORY", "IMAGE", "ACTION"]
                   .map((head) => (
-                    <TableCell key={head} align="center" sx={{ color: "white", fontWeight: "bold", fontSize: "18px"  }}>
+                    <TableCell key={head} align="center" sx={{ color: "white", fontWeight: "bold", fontSize: "18px" }}>
                       {head}
                     </TableCell>
                   ))}
               </TableRow>
             </TableHead>
 
-            <TableBody sx={{backgroundColor:"#c6e4f1"}}>
+            <TableBody sx={{ backgroundColor: "#c6e4f1" }}>
               {services.map((row, index) => (
                 <TableRow
-  key={row._id}
-  hover
-  sx={{
-    "& td": {
-      borderBottom: "4px solid #e3eff5" // 🔥 line after each row
-    }
-  }}
->
-                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{index + 1}</TableCell>
-                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.service_name}</TableCell>
-                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>₹{row.service_price}</TableCell>
-                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.service_description}</TableCell>
-                  <TableCell align="center" sx={{fontSize: "17px", fontWeight:"bold"}}>{row.category}</TableCell>
+                  key={row._id}
+                  hover
+                  sx={{
+                    "& td": {
+                      borderBottom: "4px solid #e3eff5"
+                    }
+                  }}
+                >
+                  <TableCell align="center" sx={{ fontSize: "17px", fontWeight: "bold" }}>{index + 1}</TableCell>
+                  <TableCell align="center" sx={{ fontSize: "17px", fontWeight: "bold" }}>{row.service_name}</TableCell>
+                  <TableCell align="center" sx={{ fontSize: "17px", fontWeight: "bold" }}>₹{row.service_price}</TableCell>
+                  <TableCell align="center" sx={{ fontSize: "17px", fontWeight: "bold" }}>{row.service_description}</TableCell>
+                  <TableCell align="center" sx={{ fontSize: "17px", fontWeight: "bold" }}>{row.category}</TableCell>
 
-                  {/* ✅ UPDATED IMAGE SIZE */}
                   <TableCell align="center">
                     <img
                       src={`http://localhost:8000/image/${row.service_image}`}
                       alt=""
                       style={{
-                        width: "200px",       // 🔥 increased
-                        height: "200px",      // 🔥 increased
+                        width: "200px",
+                        height: "200px",
                         borderRadius: "12px",
                         objectFit: "cover",
                         boxShadow: "0 4px 10px rgba(0,0,0,0.2)"
@@ -133,26 +132,35 @@ export default function ManageService() {
                   </TableCell>
 
                   <TableCell align="center">
-                    <Button
-                      variant="contained"
+                    <Box
                       sx={{
-                        backgroundColor: "#1e3a5f",
-                        mr: 1,
-                        "&:hover": { backgroundColor: "#1e40af" }
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: 2,           // space between buttons
+                        flexWrap: "nowrap" // prevents wrapping
                       }}
-                      component={Link}
-                      to={`/Admin/UpdateService/${row._id}`}
                     >
-                      UPDATE
-                    </Button>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#1e3a5f",
+                          "&:hover": { backgroundColor: "#1e40af" }
+                        }}
+                        component={Link}
+                        to={`/Admin/UpdateService/${row._id}`}
+                      >
+                        UPDATE
+                      </Button>
 
-                    <Button
-                      variant="contained"
-                      color="error"
-                      onClick={() => handleDelete(row._id)}
-                    >
-                      DELETE
-                    </Button>
+                      <Button
+                        variant="contained"
+                        color="error"
+                        onClick={() => handleDelete(row._id)}
+                      >
+                        DELETE
+                      </Button>
+                    </Box>
                   </TableCell>
                 </TableRow>
               ))}

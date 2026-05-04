@@ -35,7 +35,7 @@ export default function Login() {
 
   return (
     <>
-      {/* ✅ SAME HEADER AS REGISTER */}
+      {/* SAME HEADER AS REGISTER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -65,7 +65,7 @@ export default function Login() {
         </Typography>
       </Box>
 
-      {/* ✅ LOGIN FORM */}
+      {/* LOGIN FORM */}
       <Box
         sx={{
           minHeight: "70vh",

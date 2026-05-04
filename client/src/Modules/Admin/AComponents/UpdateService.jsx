@@ -83,7 +83,7 @@ export default function UpdateService() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -109,7 +109,7 @@ export default function UpdateService() {
         </Typography>
       </Box>
 
-      {/* ✅ FORM */}
+      {/* FORM */}
       <Box
         sx={{
           minHeight: "80vh",
@@ -165,7 +165,7 @@ export default function UpdateService() {
             value={service.service_description}
           />
 
-          {/* ✅ CATEGORY DROPDOWN */}
+          {/* CATEGORY DROPDOWN */}
           <FormControl fullWidth sx={{ mb: 2 }}>
             <Select
               name="categoryId"
@@ -182,7 +182,7 @@ export default function UpdateService() {
             </Select>
           </FormControl>
 
-          {/* ✅ IMAGE INPUT */}
+          {/* IMAGE INPUT */}
           <TextField
             type='file'
             InputLabelProps={{ shrink: true }}
@@ -193,7 +193,7 @@ export default function UpdateService() {
             onChange={handlechange}
           />
 
-          {/* ✅ PREVIEW IMAGE */}
+          {/* PREVIEW IMAGE */}
           {service.service_image && (
             <img
               src={`http://localhost:8000/image/${service.service_image}`}

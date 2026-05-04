@@ -53,14 +53,15 @@ export default function Sidebar() {
     { label: 'Add Category', link: '/Admin/AddCategory' },
     { label: 'Bookings', link: '/Admin/ViewBooking' },
     { label: 'Services', link: '/Admin/ManageService' },
-    { label: 'Add Services', link: '/Admin/AddService' }
+    { label: 'Add Services', link: '/Admin/AddService' },
+    { label: 'Manage Feedback', link: '/Admin/ViewFeedback' },
   ];
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
 
-      {/* 🔥 TOP BAR */}
+      {/* TOP BAR */}
       <AppBar position="fixed">
         <Toolbar>
           {!open && (
@@ -74,7 +75,7 @@ export default function Sidebar() {
         </Toolbar>
       </AppBar>
 
-      {/* 🔥 SIDEBAR */}
+      {/* SIDEBAR */}
       <Drawer
         variant="persistent"
         anchor="left"

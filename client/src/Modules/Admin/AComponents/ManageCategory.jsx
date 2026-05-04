@@ -28,7 +28,7 @@ export default function ManageCategory() {
     axios.delete(`http://localhost:8000/category/deletecategory/${uid}`)
       .then(() => {
         alert("Category deleted")
-        fetchCategories() // ✅ refresh after delete
+        fetchCategories() 
       })
       .catch((error) => {
         console.log(error)
@@ -37,7 +37,7 @@ export default function ManageCategory() {
 
   return (
     <>
-      {/* ✅ HEADER */}
+      {/* HEADER */}
       <Box
         sx={{
           backgroundColor: "#1e3a5f",
@@ -63,7 +63,7 @@ export default function ManageCategory() {
         </Typography>
       </Box>
 
-      {/* ✅ MAIN CONTENT */}
+      {/* MAIN CONTENT */}
       <Box
         sx={{
           minHeight: "80vh",
